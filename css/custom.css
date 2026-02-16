@@ -607,6 +607,7 @@ header.header_fixed {
   transition: 0.3s ease;
 }
 
+
 @media (max-width: 1400px) {
   .custom-card-setting {
 
@@ -718,6 +719,9 @@ footer {
   background-color: #EEEEEE;
   padding-top: 0%;
 }
+footer .footer_single h5::after{
+  top:12px
+}
 
 footer .footer_single h5 {
   font-size: 20px;
@@ -762,6 +766,7 @@ footer .footer_single_last h6{
     color: #737272;
     text-transform: none;
     margin-bottom: 22px;
+    margin-left: 10px;
 
 }
 
@@ -906,7 +911,7 @@ footer .footer_single_last h6{
   width: auto;
   float: none;
   display: flex;
-  gap: 5px;
+  gap: 7px;
   font-size: 19px;
 }
 
@@ -917,7 +922,13 @@ footer .footer_single_last h6{
 
 .single_bundle_custom .bundle_specs_text ul li {
   margin-bottom: 10px;
-  padding-left: 10px;
+  padding-left: 0px;
+  gap: 10px;
+}
+@media (max-width: 1450px) {
+  .single_bundle_custom .bundle_specs_text ul li {
+    gap: 0px;
+}
 }
 
 
@@ -1352,19 +1363,22 @@ footer .footer_single_last h6{
 @media (max-width: 768px) {
 
   header .header_wrapper {
-    padding: 20px 1px;
+    padding: 12px 0px;
+
 }
 .sm_offcanvas_wrapper .logo {
     text-align: center;
+    margin-top: 12px;
 }
 .sm_offcanvas_wrapper .logo::after {
     background-color: transparent;}
 
 .sm_offcanvas_wrapper nav .nav-toggle {
-    top: 115px;}
+    top: 80px;
+  }
 
     .sm_offcanvas_wrapper nav ul {
-
+      padding-top: 124px;
     left: 0;
     top: 0px;
   }
@@ -1378,7 +1392,7 @@ footer .footer_single_last h6{
     right: 0px;
 }
 .custom_arrows .prev_arrow {
-    left: 275px;
+    left: 270px;
 }
 
 
@@ -1530,7 +1544,7 @@ position: absolute;
 
 
 .footer_single_last{
-  padding-left: 10px;
+  /* padding-left: 10px; */
   
 }
 footer .footer_single_last ul   li a:focus, footer .footer_single_last ul li a:hover{
@@ -1540,10 +1554,18 @@ footer .footer_single_last ul   li a:focus, footer .footer_single_last ul li a:h
 footer .footer_single h5::after:last-child {
   content: none;
 }
+
+
 /* .footer-text{
   font-size: 10px;
   
 } */
+
+
+/* FAQ */
+.faq-accordion .accordion-button::after {
+   font-size: large;
+}
 
 /* ==================================SINGLE-Bundle==================================================== */
 
@@ -1666,13 +1688,15 @@ footer .footer_single h5 {
   margin-bottom: 5px;
 }
 
+.footer .footer_single ul{
+  margin-bottom: 0px;
+}
+
 .faq-accordion .accordion-button {    
     font-size: 16px;
 }
 
 }
-
-
 
 
 
@@ -1725,7 +1749,7 @@ footer .footer_single h5 {
 
 
 
-@media (max-width: 361px) {
+@media (max-width: 391px) {
 
 
     .custom_arrows .prev_arrow {
@@ -1782,9 +1806,63 @@ footer .footer_single h5 {
 
     .single_bundle_custom .bundle_specs_text ul li .icon_holder, .single_bundle_custom .bundle_specs_text ul li .specs_col {
     
-    display: inline-grid;
+    /* display: inline-grid; */
     }
 
+        .single_bundle_custom .bundle_specs_text ul li {
+        margin-bottom: 10px;
+        gap: 0px;
+    }
+        .single_bundle_custom .bundle_specs_text .icon_holder img {
+        width: 65%;
+    }
+    .single_bundle_custom .bundle_specs_text ul li .icon_holder, .single_bundle_custom .bundle_specs_text ul li .specs_col {
+        font-size: 14px;
+        justify-content: center;
+    }
+        .single_bundle_custom .bundle_specs_text ul li .specs_col span {
+        font-size: 12px;
+    }
+
+    
+.single_bundle .single_bundle_wrapper .bundle_front, .single_bundle .single_bundle_wrapper .bundle_back {
+    padding: 15px;
+  }
+
+  .single_bundle_custom .bundle_specs_text ul li {
+
+     padding-left: 0px;
+
+}
 }
 
+@media (max-width: 768px) {
 
+  .search_holder .search_content .form-control, .search_holder .search_content input[type=text] {
+        border-radius: 8px;
+    }
+  .footer_single_last {
+    text-align: center;
+  }
+
+  .footer_single_last h6 {
+    text-align: start !important;
+  }
+
+  .footer_single_last ul li {
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px;
+  }
+
+  header .menu_btn_holder a span {
+    background-color: #2c2c2c;
+}
+.ri-search-line::before {
+    color: #2c2c2c;
+}
+header .menu_btn_holder a {
+    padding: 14px 8px 12px 8px;
+}
+
+}
